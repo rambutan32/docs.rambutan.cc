@@ -3,8 +3,44 @@
 
 /* TODO: http://practicaltypography.com/rules-and-borders.html */
 
+/* Fonts first */
+@font-face {
+  font-family: 'Source Code Pro';
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.otf')  format('opentype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.woff') format('woff'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.ttf')  format('truetype'),
+    url('http://rambutan.cc/theme/source-code-pro/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: local('Crimson Text'), local('CrimsonText-Roman'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.woff') format('woff'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.ttf')  format('truetype'),
+       url('http://rambutan.cc/theme/crimson/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), local('OpenSans'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.woff') format('woff'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.ttf')  format('truetype'),
+    url('http://rambutan.cc/theme/open-sans/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* End of fonts */
+
 body {
-    font-family: serif;
+    font-family: "Crimson Text", serif;
     font-size: 16px;
 }
 
@@ -14,40 +50,35 @@ body {
     color: rgb(72, 72, 72);
 }
 
-.sphinxsidebar {
-    padding-top: 6em;
-    opacity: 0.65;
-    font-size: 0.9rem;
-}
-
-.sphinxsidebar:hover {
-    opacity: 0.9;
-}
-
-.sphinxsidebar .search input {
-    padding-left: 0.25rem;
-    margin-bottom: 2em;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: #000;
-    font-family: "Helvetica", sans-serif;
+    font-family: "Open Sans", "Helvetica", sans-serif;
 }
 
 h1 { font-size: 1.6em; font-weight: bold; }
 h2 { font-size: 1.3em; font-weight: normal; }
-h3 { font-size: 1.1em; font-weight: normal; }
-h4 { font-size: 1.0em; font-weight: normal; }
-h5 { font-size: 1.0em; font-weight: normal; }
+h3 { font-size: 1.05em; font-weight: normal; }
+h4 { font-size: 0.9em; font-weight: normal; }
+h5 { font-size: 0.9em; font-weight: normal; }
 
 header h1 {
+    opacity: 0.65;
     margin-top: 0.3em;
     font-size: 1.2em;
-    opacity: 0.65;
+    margin-left: 240px;
+    font-family: "Open Sans", "Helvetica", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: normal;
 }
 
 header h1:hover {
     opacity: 0.9;
+}
+
+header h1 a, header h1 a:visited {
+    color: #000;
 }
 
 .rubric {
@@ -70,21 +101,6 @@ footer#pagefooter, footer#pagefooter a {
 .contents .topic-title {
     font-weight: normal;
 }
-
-body > header h1 a, body > header h1 a:visited {
-    color: #000;
-    margin-left: 240px;
-    font-family: "Helvetica", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-variant: small-caps;
-    font-weight: normal;
-}
-
-.sphinxsidebar h3 a {
-    color: #444;
-}
-
 pre, tt {
     font-family: "Source Code Pro", "Monaco", "Consolas", "Lucida Console", monospace;
 }
@@ -102,8 +118,27 @@ a tt {
     font-weight: normal;
 }
 
+.sphinxsidebar {
+    padding-top: 10em;
+    opacity: 0.65;
+    font-size: 0.9rem;
+}
+
+.sphinxsidebar:hover {
+    opacity: 0.9;
+}
+
+.sphinxsidebar .search input {
+    padding-left: 0.25rem;
+    margin-bottom: 2em;
+}
+
+.sphinxsidebar h3 a {
+    color: #222;
+}
+
 .highlight pre {
-    color: #ccc;
+    color: #ddd;
     background-color: #333;
     padding: 0.75em;
     margin-bottom: 2em;
@@ -114,6 +149,27 @@ a tt {
     line-height: 120%;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+tt.descname {
+    font-size: 0.8em;
+}
+
+dl.function > dt, dl.class > dt, dl.method > dt, dl.attribute > dt, dl.data > dt, dl.classmethod > dt, dl.enum > dt {
+    margin-bottom: 0.5em;
+    background: #f4f4f4;
+}
+
+dl li > p {
+    display: inline;
+}
+
+.related.bottom {
+    margin-top: 2em;
+}
+
 div.admondition, div.topic, div.warning, div.note {
     border-left: none;
     border-right: none;
@@ -121,12 +177,4 @@ div.admondition, div.topic, div.warning, div.note {
 
 div.note, div.topic {
     background-color: #f4f4f4;
-}
-
-.related .bottom {
-    margin-top: 2em;
-}
-
-a:hover {
-    text-decoration: none;
 }
