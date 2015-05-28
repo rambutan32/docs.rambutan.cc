@@ -14,4 +14,5 @@ short) index of sub-project documentation links.
 Subproject Documentation
 ---------------------------
 
-* `librambutan <http://docs.rambutan.cc/projects/librambutan/en/latest/>`_
+* `librambutan <http://docs.rambutan.cc/projects/librambutan/en/latest/>`_ -
+  firmware helper libraries in C and C++
